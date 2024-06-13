@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            background: #080808;
+            color: #fff;
+        }
+        
+        .btn {
+            display: block;
+            margin: 50px auto;
+            width: fit-content;
+            border: 1px solid #007bff; /* Changed border color */
+            padding: 14px 50px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.5s;
+        }
+
+        .btn:hover {
+            background: #007bff; /* Changed hover background color */
+        }
+
+        .work-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .work {
+            display: flex;
+            max-width: 800px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .work-image {
+            flex: 1;
+        }
+
+        .work-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .work-details {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .work-details h2 {
+            margin-top: 0;
+        }
+
+        .work-details p {
+            margin: 10px 0;
+        }
+
+        .work-details a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .work-details a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Additional CSS for the hidden work details */
+        .work-details-more {
+            display: none;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: white;
+        }
+        .work-details-more ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        h1 {
+    /* text-align: center; Align the heading to the center */
+    margin-top: 50px; /* Adjust the top margin as needed */
+    /* margin-right: 50px; */
+    margin-left: 100px;
+    /* font-size: 60px; Set the font size */
+}
+        
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">About Me</a></li>
+                    <li><a href="./certficate.html">Certificates</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./work.html">Works</a></li>
+                    <li><a href="./index.html#contact">Contact Me</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+   
+
+    <h1>Work Experience</h1>
+
+    <!-- Work Section -->
+    <div class="work-container">
+        <div class="work">
+            <div class="work-image">
+                <img src="images/aws-logo.png" alt="Amazon Web Services">
+            </div>
+            <div class="work-details">
+                <h2>Amazon Web Services (AWS)</h2>
+                <p>Managed and optimized AWS infrastructure for efficient deployment and scaling of applications.</p>
+                <!-- Button to toggle more details -->
+                <a class="btn" href="#" onclick="toggleDetails('work1-details')">See more</a>
+                <!-- Hidden work details -->
+                <div class="work-details-more" id="work1-details">
+                    <p><strong>Key Technologies:</strong> AWS EC2, S3, RDS, Lambda, CloudFormation</p>
+                    <p><strong>Dates:</strong> Start - Jan 2023, End - Present</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Architected scalable and reliable solutions using AWS services.</li>
+                        <li>Implemented automation for infrastructure management.</li>
+                        <li>Optimized cloud costs and improved performance.</li>
+                        <li>Provided support and training to development teams on AWS best practices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more work sections in the same way -->
+    <!-- Work 2 -->
+    <<!-- Docker & Kubernetes -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/docker-logo.png" alt="Docker">
+        </div>
+        <div class="work-details">
+            <h2>Docker & Kubernetes</h2>
+            <p>Utilized Docker for managing containerized applications and `kubectl` for orchestration and management of microservices architecture.</p>
+            <a class="btn" href="#" onclick="toggleDetails('work2-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="work2-details">
+                <p><strong>Key Technologies:</strong> Docker, Kubectl</p>
+                <p><strong>Dates:</strong> Start - Jun 2022, End - Dec 2022</p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Managed containerized applications using Docker.</li>
+                    <li>Orchestrated microservices architecture with `kubectl`.</li>
+                    <li>Implemented monitoring and logging solutions with Prometheus and Grafana.</li>
+                    <li>Optimized CI/CD pipelines for faster delivery using Jenkins and GitHub Actions.</li>
+                    <li>Built and deployed React web applications on AWS.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Work 3 -->
+    <div class="work-container">
+        <div class="work">
+            <div class="work-image">
+                <img src="images/github-logo.png" alt="GitHub">
+            </div>
+            <div class="work-details">
+                <h2>Version Control & CI/CD</h2>
+                <p>Implemented CI/CD pipelines using GitHub Actions and Jenkins for automated testing and deployment.</p>
+                <a class="btn" href="#" onclick="toggleDetails('work3-details')">See more</a>
+                <!-- Hidden work details -->
+                <div class="work-details-more" id="work3-details">
+                    <p><strong>Key Technologies:</strong> GitHub Actions, Jenkins, Ansible, Terraform</p>
+                    <p><strong>Dates:</strong> Start - Mar 2022, End - May 2022</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Automated build, test, and deployment processes.</li>
+                        <li>Improved code quality with continuous integration.</li>
+                        <li>Deployed infrastructure as code using Terraform.</li>
+                        <li>Ensured consistency and reliability in deployment processes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Ubuntu Linux and Basic AWS Command Usage -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/ubuntu-logo.png" alt="Ubuntu">
+        </div>
+        <div class="work-details">
+            <h2>Ubuntu Linux </h2>
+            <p>Proficient in managing Ubuntu Linux servers and utilizing basic command-line operations in AWS.</p>
+            <a class="btn" href="#" onclick="toggleDetails('work4-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="work4-details">
+                <p><strong>Key Technologies:</strong> Ubuntu, AWS CLI</p>
+                <p><strong>Experience:</strong> Managed Ubuntu Linux servers and performed basic command-line operations in AWS.</p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Configured and maintained Linux servers.</li>
+                    <li>Utilized AWS CLI for basic operations such as instance management and resource provisioning.</li>
+                    <li>Optimized server performance and security.</li>
+                    <li>Automated administrative tasks with shell scripts.</li>
+                    <li>Implemented backup and recovery solutions.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Java Problem Solving -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/java-logo.png" alt="Java">
+        </div>
+        <div class="work-details">
+            <h2>Java Problem Solving</h2>
+            <p>Proficient in Java programming language with experience in solving algorithmic and data structure problems.</p>
+            <a class="btn" href="#" onclick="toggleDetails('java-problem-solving-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="java-problem-solving-details">
+                <p><strong>Key Areas:</strong> Algorithmic Problem Solving, Data Structures, Competitive Programming</p>
+                <p><strong>Experience:</strong></p>
+                <ul>
+                    <li>Participated in competitive programming contests, solving algorithmic challenges efficiently.</li>
+                    <li>Implemented various data structures and algorithms for efficient problem-solving.</li>
+                    <li>Practiced problem-solving on online platforms like LeetCode, HackerRank, SkillRack and GeeksforGeeks.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jenkins (CI/CD Pipelines with GitHub Actions) -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/jenkins-logo.jpg" alt="Jenkins">
+        </div>
+        <div class="work-details">
+            <h2>Jenkins </h2>
+            <p>Proficient in setting up and configuring Jenkins for continuous integration and continuous deployment (CI/CD) pipelines. Beginner level experience in integrating GitHub Actions with Jenkins.</p>
+            <a class="btn" href="#" onclick="toggleDetails('jenkins-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="jenkins-details">
+                <p><strong>Key Areas:</strong> CI/CD Pipelines, Automation </p>
+                <p><strong>Experience:</strong> Configured Jenkins pipelines for building, testing, and deploying applications. Began exploring GitHub Actions integration within Jenkins.</p>
+                <p><strong>Projects:</strong></p>
+                <ul>
+                    <li>Set up Jenkins pipelines for automating software delivery processes.</li>
+                    <li>Integrated Jenkins with version control systems like GitHub for automatic triggering of builds.</li>
+                    <li>Explored integration of GitHub Actions within Jenkins pipelines for enhanced automation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Python Programming (Beginner) -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/python-logo.png" alt="Python">
+        </div>
+        <div class="work-details">
+            <h2>Python Programming (Beginner)</h2>
+            <p>Currently learning Python programming language for various applications including web development, data analysis, and automation tasks.</p>
+            <a class="btn" href="#" onclick="toggleDetails('python-beginner-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="python-beginner-details">
+                <p><strong>Key Areas:</strong> Web Development, Data Analysis, Automation</p>
+                <p><strong>Learning:</strong> Exploring Python syntax, basic data structures, and introductory concepts.</p>
+                <p><strong>Goals:</strong> To develop proficiency in Python programming for building applications and automating tasks.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Terraform (AWS Automation - Learning) -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/terraform-logo.png" alt="Terraform">
+        </div>
+        <div class="work-details">
+            <h2>Terraform (AWS Automation - Learning)</h2>
+            <p>Currently learning Terraform for automating infrastructure provisioning and management on AWS.</p>
+            <a class="btn" href="#" onclick="toggleDetails('terraform-learning-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="terraform-learning-details">
+                <p><strong>Key Areas:</strong> Infrastructure as Code, Cloud Resource Management, Automation</p>
+                <p><strong>Learning:</strong> Exploring Terraform syntax, AWS resource provisioning, and automation concepts.</p>
+                <p><strong>Goals:</strong> To become proficient in using Terraform for AWS infrastructure automation and deployment.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- UI Design (Proficient in Figma) -->
+<div class="work-container">
+    <div class="work">
+        <div class="work-image">
+            <img src="images/ui-design-logo.png" alt="UI Design">
+        </div>
+        <div class="work-details">
+            <h2>UI Design </h2>
+            <p>Experienced in designing user interfaces (UI) for web and mobile applications with a focus on usability and aesthetics.</p>
+            <a class="btn" href="#" onclick="toggleDetails('ui-design-details')">See more</a>
+            <!-- Hidden work details -->
+            <div class="work-details-more" id="ui-design-details">
+                <p><strong>Key Areas:</strong> User Experience (UX) Design, Wireframing, Prototyping</p>
+                <p><strong>Tools:</strong> Figma, Canva</p>
+                <p><strong>Experience:</strong> Designed intuitive and visually appealing interfaces for various projects.</p>
+                <p><strong>Projects:</strong></p>
+                <ul>
+                    <li>Created wireframes and prototypes for a web application using Figma, such as the Groove AI web design project for a client.</li>
+                    <li>Designed mobile app interfaces with a focus on user-friendly navigation and aesthetics.</li>
+                    <li>Collaborated with development teams to ensure UI designs are implemented accurately.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <!-- Add more work sections as needed -->
+
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
