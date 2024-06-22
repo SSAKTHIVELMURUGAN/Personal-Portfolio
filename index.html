@@ -1,180 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sakthivel Murugan Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/36df918651.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/36df918651.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Hide the icons by default */
+      .mobile-icon {
+        display: none;
+      }
+
+      /* Show the icons on mobile devices */
+      @media (max-width: 600px) {
+        .mobile-icon {
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo" alt="Logo">
-                <ul id="sidemenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#certificate">Certificates</a></li>
-                    <li><a href="#project">Projects</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <h1>Hello I'm <span>Sakthivel Murugan S</span></h1>
-                <p>DevOps Engineer, Designer</p>
-            </div>
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" alt="Logo" />
+          <ul id="sidemenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#certificate">Certificates</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <i class="fa-solid fa-xmark mobile-icon" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars mobile-icon" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <h1>Hello I'm <span>Sakthivel Murugan S</span></h1>
+          <p>DevOps Engineer, Designer</p>
         </div>
+      </div>
     </div>
 
     <!-- About Section -->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png" class="rounded-image" alt="User Image">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>I am currently pursuing a B.E. in Electronics and Communication Engineering at Karpagam Institute of Technology. My passion for technology and a solid foundation in digital electronics and communication systems have equipped me with versatile skills in DevOps and UI Design.</p>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" class="rounded-image" alt="User Image" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am currently pursuing a B.E. in Electronics and Communication
+              Engineering at Karpagam Institute of Technology. My passion for
+              technology and a solid foundation in digital electronics and
+              communication systems have equipped me with versatile skills in
+              DevOps and UI Design.
+            </p>
 
-<ul>
-    <li><b>DevOps Engineer:</b>
-        <ul>
-            <li>Deploying and managing scalable applications on AWS.</li>
-            <li>Utilizing Docker and Kubernetes for containerization and orchestration.</li>
-            <li>Automating infrastructure provisioning with Terraform.</li>
-        </ul>
-    </li>
-    <li><b>UI Designer:</b>
-        <ul>
-            <li>Creating intuitive interfaces using Figma.</li>
-            <li>Designing engaging visual content with Canva.</li>
-        </ul>
-    </li>
-</ul>
-<p>Combining technical expertise with creative design, I aim to push the boundaries of technology and create impactful digital solutions.</p>
-   </div>
-            </div>
+            <ul>
+              <li>
+                <b>DevOps Engineer:</b>
+                <ul>
+                  <li>Deploying and managing scalable applications on AWS.</li>
+                  <li>
+                    Utilizing Docker and Kubernetes for containerization and
+                    orchestration.
+                  </li>
+                  <li>
+                    Automating infrastructure provisioning with Terraform.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>UI Designer:</b>
+                <ul>
+                  <li>Creating intuitive interfaces using Figma.</li>
+                  <li>Designing engaging visual content with Canva.</li>
+                </ul>
+              </li>
+            </ul>
+            <p>
+              Combining technical expertise with creative design, I aim to push
+              the boundaries of technology and create impactful digital
+              solutions.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Projects Section -->
     <div id="project">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/mark-average-calculator.png" alt="Mark Average Calculator">
-                    <div class="layer">
-                        <h3>Mark Average Calculator</h3>
-                        <p>Developed a web-based application for calculating total, average, and percentage marks across multiple subjects. Leveraged AWS serverless architecture with Lambda, API Gateway, and DynamoDB for seamless performance and scalability. Integrated AWS Amplify for simplified deployment and management of frontend and backend services.</p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/react-portfolio-application.jpg" alt="React Portfolio Application">
-                    <div class="layer">
-                        <h3>React Portfolio Application with AWS and Docker</h3>
-                        <p>Developed and deployed a responsive portfolio website using React.js, AWS services, and Docker. Utilized AWS S3 for static website hosting and CloudFront for content delivery, ensuring high performance and scalability. Integrated CI/CD pipeline with GitHub Actions for automated deployment. Containerized the application using Docker for consistent deployment across environments.</p>
-                    </div>
-                </div>
-                <!-- <div class="work">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img
+              src="images/mark-average-calculator.png"
+              alt="Mark Average Calculator"
+            />
+            <div class="layer">
+              <h3>Mark Average Calculator</h3>
+              <p>
+                Developed a web-based application for calculating total,
+                average, and percentage marks across multiple subjects.
+                Leveraged AWS serverless architecture with Lambda, API Gateway,
+                and DynamoDB for seamless performance and scalability.
+                Integrated AWS Amplify for simplified deployment and management
+                of frontend and backend services.
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img
+              src="images/react-portfolio-application.jpg"
+              alt="React Portfolio Application"
+            />
+            <div class="layer">
+              <h3>React Portfolio Application with AWS and Docker</h3>
+              <p>
+                Developed and deployed a responsive portfolio website using
+                React.js, AWS services, and Docker. Utilized AWS S3 for static
+                website hosting and CloudFront for content delivery, ensuring
+                high performance and scalability. Integrated CI/CD pipeline with
+                GitHub Actions for automated deployment. Containerized the
+                application using Docker for consistent deployment across
+                environments.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="work">
                     <img src="images/sonic-safe-anc.png" alt="Sonic Safe ANC Industrial Solution">
                     <div class="layer">
                         <h3>Sonic Safe ANC Industrial Solution</h3>
                         <p>Developed and implemented an innovative solution addressing noise pollution in industrial environments. Leveraged advanced Active Noise Cancellation (ANC) technology and the NRF24L01+PA+LNA wireless module to significantly reduce ambient noise levels, fostering a quieter and safer work environment.</p>
                     </div>
                 </div> -->
-                <!-- <div class="work">
+          <!-- <div class="work">
                     <img src="images/selenium-automation.jpg" alt="Java Selenium Automation Project">
                     <div class="layer">
                         <h3>Java Selenium Automation Project</h3>
                         <p>Automated registration and form filling on OrangeHRM and Parabank websites using Java Selenium. Implemented TestNG for robust test case execution, ensuring reliability. Ongoing project with a focus on expanding automated test cases, enhancing reporting capabilities, and exploring CI/CD pipeline integration.</p>
                     </div>
                 </div> -->
-                <!-- <div class="work">
+          <!-- <div class="work">
                     <img src="images/groove-ai-bot-website.jpg" alt="Groove AI Bot Website Design">
                     <div class="layer">
                         <h3>Groove AI Bot Website Design</h3>
                         <p>Designed the Groove AI Bot website using Canva, crafting high-fidelity mockups for both web poster and admin console. The responsive, user-friendly interface, delivered on time and within budget, bolstered the client's online presence.</p>
                     </div>
                 </div> -->
-            </div>
-            <a href="projects.html" class="btn">See more</a>
         </div>
+        <a href="projects.html" class="btn">See more</a>
+      </div>
     </div>
-    
-<!-- Works Section -->
-<div id="works">
-    <div class="container">
+
+    <!-- Works Section -->
+    <div id="works">
+      <div class="container">
         <h1 class="sub-title">Work Experience</h1>
         <div class="services-list">
-            <div>
-                <i class="fa-brands fa-aws"></i>
-                <h2>Amazon Web Services (AWS)</h2>
-                <h3>DevOps Engineer</h3>
-                <p>Managed and optimized AWS infrastructure for efficient deployment and scaling of applications.</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-docker"></i>
-                <h2>Docker & Kubernetes</h2>
-                <h3>Containerization Specialist</h3>
-                <p>Utilized Docker and Kubernetes for containerization and orchestration of microservices architecture.</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-github"></i>
-                <h2>Version Control & CI/CD</h2>
-                <h3>GitHub & Jenkins</h3>
-                <p>Implemented CI/CD pipelines using GitHub Actions and Jenkins for automated testing and deployment.</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-ubuntu"></i>
-                <h2>Ubuntu Linux</h2>
-                <h3>Linux Systems Administrator</h3>
-                <p>Managed Ubuntu Linux servers and optimized system performance for various applications.</p>
-            </div>
+          <div>
+            <i class="fa-brands fa-aws"></i>
+            <h2>Amazon Web Services (AWS)</h2>
+            <h3>DevOps Engineer</h3>
+            <p>
+              Managed and optimized AWS infrastructure for efficient deployment
+              and scaling of applications.
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-docker"></i>
+            <h2>Docker & Kubernetes</h2>
+            <h3>Containerization Specialist</h3>
+            <p>
+              Utilized Docker and Kubernetes for containerization and
+              orchestration of microservices architecture.
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-github"></i>
+            <h2>Version Control & CI/CD</h2>
+            <h3>GitHub & Jenkins</h3>
+            <p>
+              Implemented CI/CD pipelines using GitHub Actions and Jenkins for
+              automated testing and deployment.
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-ubuntu"></i>
+            <h2>Ubuntu Linux</h2>
+            <h3>Linux Systems Administrator</h3>
+            <p>
+              Managed Ubuntu Linux servers and optimized system performance for
+              various applications.
+            </p>
+          </div>
         </div>
         <a href="work.html" class="btn">See more</a>
 
-    <!-- Certificate -->
+        <!-- Certificate -->
         <h1 class="sub-title">Certifications</h1>
         <div class="services-list" id="certificate">
-            <div>
-                <i class="fa-brands fa-ibm"></i>
-                <h2>Cloud Core Course</h2>
-                <h3>IBM</h3>
-                <p>Aug 2023 – Nov 2023</p>
-                <p>Learning Modules: Cloud fundamentals, Cloud infrastructure, Cloud services</p>
-                <p>Learning Outcomes: Understanding cloud computing concepts, practical experience with IBM cloud services</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-java"></i>
-                <h2>Core Java Programming Course</h2>
-                <h3>Infosys Springboard</h3>
-                <p>Aug 2023 - Sep 2023</p>
-                <p>Learning Modules: Java basics, OOP concepts, Exception handling</p>
-                <p>Learning Outcomes: Proficiency in Java programming, ability to develop Java applications</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-python"></i>
-                <h2>Python Course</h2>
-                <h3>GUVI</h3>
-                <p>Jun 2023 - Jul 2023</p>
-                <p>Learning Modules: Python basics, Data structures, File handling</p>
-                <p>Learning Outcomes: Proficiency in Python programming, ability to solve problems using Python</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-cisco"></i>
-                <h2>Network Essentials Course</h2>
-                <h3>Cisco</h3>
-                <p>Feb 2023 - Apr 2023</p>
-                <p>Learning Modules: Networking basics, Routing and switching, Network security</p>
-                <p>Learning Outcomes: Understanding of network infrastructure, practical skills in configuring and managing networks</p>
-            </div>
-            <!-- <div>
+          <div>
+            <i class="fa-brands fa-ibm"></i>
+            <h2>Cloud Core Course</h2>
+            <h3>IBM</h3>
+            <p>Aug 2023 – Nov 2023</p>
+            <p>
+              Learning Modules: Cloud fundamentals, Cloud infrastructure, Cloud
+              services
+            </p>
+            <p>
+              Learning Outcomes: Understanding cloud computing concepts,
+              practical experience with IBM cloud services
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-java"></i>
+            <h2>Core Java Programming Course</h2>
+            <h3>Infosys Springboard</h3>
+            <p>Aug 2023 - Sep 2023</p>
+            <p>
+              Learning Modules: Java basics, OOP concepts, Exception handling
+            </p>
+            <p>
+              Learning Outcomes: Proficiency in Java programming, ability to
+              develop Java applications
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-python"></i>
+            <h2>Python Course</h2>
+            <h3>GUVI</h3>
+            <p>Jun 2023 - Jul 2023</p>
+            <p>
+              Learning Modules: Python basics, Data structures, File handling
+            </p>
+            <p>
+              Learning Outcomes: Proficiency in Python programming, ability to
+              solve problems using Python
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-cisco"></i>
+            <h2>Network Essentials Course</h2>
+            <h3>Cisco</h3>
+            <p>Feb 2023 - Apr 2023</p>
+            <p>
+              Learning Modules: Networking basics, Routing and switching,
+              Network security
+            </p>
+            <p>
+              Learning Outcomes: Understanding of network infrastructure,
+              practical skills in configuring and managing networks
+            </p>
+          </div>
+          <!-- <div>
                 <i class="fa-solid fa-mobile-alt"></i>
                 <h2>Hands-on Training on Smartphone Troubleshooting</h2>
                 <h3>Karpagam Institude of Technology</h3>
@@ -184,67 +272,92 @@
             </div> -->
         </div>
         <a href="certficate.html" class="btn">See more</a>
+      </div>
     </div>
-</div>
-
 
     <!-- Contact Section -->
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:s.sakthivelmurugan2003@gmail.com">s.sakthivelmurugan2003@gmail.com</a></p>
-                    <p><i class="fas fa-phone"></i> 8903564432</p>
-                    <div class="social-icons">
-                        <!-- <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:s.sakthivelmurugan2003@gmail.com"
+                >s.sakthivelmurugan2003@gmail.com</a
+              >
+            </p>
+            <p><i class="fas fa-phone"></i> 8903564432</p>
+            <div class="social-icons">
+              <!-- <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
                         <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a> -->
-                        <!-- <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a> -->
-                        <a href="https://www.linkedin.com/in/s-sakthivel-murugan-7515a1269/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/SSAKTHIVELMURUGAN"><i class="fab fa-github"></i></a>
-                    </div>
-                    <a href="images/SAKTHIVEL_MURUGAN_S_721221106084.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
+              <!-- <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a> -->
+              <a
+                href="https://www.linkedin.com/in/s-sakthivel-murugan-7515a1269/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/SSAKTHIVELMURUGAN"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
+            <a
+              href="images/SAKTHIVEL_MURUGAN_S_721221106084.pdf"
+              download
+              class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
+      </div>
     </div>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzr7CKAKP0cv1UpK8Se7vJJGgsnOvBdHja_CE-3lKExWnl6N8DtD0ZgO85TOsv_pWWn8Q/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzr7CKAKP0cv1UpK8Se7vJJGgsnOvBdHja_CE-3lKExWnl6N8DtD0ZgO85TOsv_pWWn8Q/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    setTimeout(function(){
-                        msg.innerHTML = "";
-                    }, 5000);
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
 
-        var sidemenu = document.getElementById("sidemenu");
+      var sidemenu = document.getElementById("sidemenu");
 
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
 
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
     </script>
-</body>
+  </body>
 </html>
