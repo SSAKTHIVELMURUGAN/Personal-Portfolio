@@ -371,9 +371,14 @@ nav .fas {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 601px) {
     #header {
-        background-image: url(images/phone-background.png);
+        background-image: url(images/phone-background.jpg);
     }
 
     .header-text {
@@ -451,6 +456,12 @@ nav .fas {
     .copyright {
         font-size: 14px;
     }
+
+    .hide {
+        display: inline-block
+    }
+
+
 }
 
 #msg {
