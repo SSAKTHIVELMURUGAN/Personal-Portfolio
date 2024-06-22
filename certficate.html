@@ -1,205 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Certificates</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your CSS file -->
+    <script
+      src="https://kit.fontawesome.com/36df918651.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        body {
-            background: #080808;
-            color: #fff;
-        }
-        
-        .btn {
-            display: block;
-            margin: 50px auto;
-            width: fit-content;
-            border: 1px solid #007bff; /* Changed border color */
-            padding: 14px 50px;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #fff;
-            transition: background 0.5s;
-        }
+        /* Hide the icons by default */
+      .mobile-icon {
+        display: none;
+      }
 
-        .btn:hover {
-            background: #007bff; /* Changed hover background color */
+      /* Show the icons on mobile devices */
+      @media (max-width: 600px) {
+        .mobile-icon {
+          display: inline-block;
         }
+      }
+      body {
+        background: #080808;
+        color: #fff;
+      }
 
-        .certificate-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
+      .btn {
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #007bff; /* Changed border color */
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #fff;
+        transition: background 0.5s;
+      }
 
-        .certificate {
-            display: flex;
-            max-width: 800px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+      .btn:hover {
+        background: #007bff; /* Changed hover background color */
+      }
 
-        .certificate-image {
-            flex: 1;
-        }
+      .certificate-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
 
-        .certificate-image img {
-            max-width: 100%;
-            height: auto;
-        }
+      .certificate {
+        display: flex;
+        max-width: 800px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+      }
 
-        .certificate-details {
-            flex: 2;
-            padding: 20px;
-        }
+      .certificate-image {
+        flex: 1;
+      }
 
-        .certificate-details h2 {
-            margin-top: 0;
-        }
+      .certificate-image img {
+        max-width: 100%;
+        height: auto;
+      }
 
-        .certificate-details p {
-            margin: 10px 0;
-        }
+      .certificate-details {
+        flex: 2;
+        padding: 20px;
+      }
 
-        .certificate-details a {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+      .certificate-details h2 {
+        margin-top: 0;
+      }
 
-        .certificate-details a:hover {
-            background-color: #0056b3;
-        }
-        h1 {
-    /* text-align: center; Align the heading to the center */
-    margin-top: 50px; /* Adjust the top margin as needed */
-    /* margin-right: 50px; */
-    margin-left: 100px;
-    /* font-size: 60px; Set the font size */
-}
+      .certificate-details p {
+        margin: 10px 0;
+      }
 
+      .certificate-details a {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .certificate-details a:hover {
+        background-color: #0056b3;
+      }
+      h1 {
+        /* text-align: center; Align the heading to the center */
+        margin-top: 50px; /* Adjust the top margin as needed */
+        /* margin-right: 50px; */
+        margin-left: 100px;
+        /* font-size: 60px; Set the font size */
+      }
     </style>
-</head>
-<body>
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo" alt="Logo">
-                <ul id="sidemenu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./index.html#about">About Me</a></li>
-                    <li><a href="./certficate.html">Certificates</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./work.html">Works</a></li>
-                    <li><a href="./index.html#contact">Contact Me</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-        </div>
-   
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" alt="Logo" />
+        <ul id="sidemenu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#about">About Me</a></li>
+          <li><a href="./certficate.html">Certificates</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./work.html">Works</a></li>
+          <li><a href="./index.html#contact">Contact Me</a></li>
+          <i class="fa-solid fa-xmark mobile-icon" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars mobile-icon" onclick="openmenu()"></i>
+      </nav>
+    </div>
 
     <h1>My Certificates</h1>
 
     <!-- Certificate Section -->
     <div class="certificate-container">
-        <div class="certificate">
-            <div class="certificate-image">
-                <img src="images/cloud_certificate.png" alt="Cloud Core Course Certificate">
-            </div>
-            <div class="certificate-details">
-                <h2>Cloud Core Course</h2>
-                <p>Provider: IBM</p>
-                <p>Date: Aug 2023 - Nov 2023</p>
-                <p>Learning Modules: Cloud fundamentals, Cloud infrastructure, Cloud services</p>
-                <p>Learning Outcomes: Understanding cloud computing concepts, practical experience with IBM cloud services</p>
-                <a href="#" onclick="showCertificate('images/cloud_certificate.png')">View Certificate</a>
-            </div>
+      <div class="certificate">
+        <div class="certificate-image">
+          <img
+            src="images/cloud_certificate.png"
+            alt="Cloud Core Course Certificate"
+          />
         </div>
+        <div class="certificate-details">
+          <h2>Cloud Core Course</h2>
+          <p>Provider: IBM</p>
+          <p>Date: Aug 2023 - Nov 2023</p>
+          <p>
+            Learning Modules: Cloud fundamentals, Cloud infrastructure, Cloud
+            services
+          </p>
+          <p>
+            Learning Outcomes: Understanding cloud computing concepts, practical
+            experience with IBM cloud services
+          </p>
+          <a href="#" onclick="showCertificate('images/cloud_certificate.png')"
+            >View Certificate</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Certificate Section 2 -->
     <div class="certificate-container">
-        <div class="certificate">
-            <div class="certificate-image">
-                <img src="images/java_certificate.jpg" alt="Core Java Programming Course Certificate">
-            </div>
-            <div class="certificate-details">
-                <h2>Core Java Programming Course</h2>
-                <p>Provider: Infosys Springboard</p>
-                <p>Date: Aug 2023 - Sep 2023</p>
-                <p>Learning Modules: Java basics, OOP concepts, Exception handling</p>
-                <p>Learning Outcomes: Proficiency in Java programming, ability to develop Java applications</p>
-                <a class="btn" href="#" onclick="showCertificate('images/java_certificate.jpg')">View Certificate</a>
-            </div>
+      <div class="certificate">
+        <div class="certificate-image">
+          <img
+            src="images/java_certificate.jpg"
+            alt="Core Java Programming Course Certificate"
+          />
         </div>
+        <div class="certificate-details">
+          <h2>Core Java Programming Course</h2>
+          <p>Provider: Infosys Springboard</p>
+          <p>Date: Aug 2023 - Sep 2023</p>
+          <p>Learning Modules: Java basics, OOP concepts, Exception handling</p>
+          <p>
+            Learning Outcomes: Proficiency in Java programming, ability to
+            develop Java applications
+          </p>
+          <a
+            class="btn"
+            href="#"
+            onclick="showCertificate('images/java_certificate.jpg')"
+            >View Certificate</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Certificate Section 3 -->
     <div class="certificate-container">
-        <div class="certificate">
-            <div class="certificate-image">
-                <img src="images/python_certificate.jpg" alt="Python Course Certificate">
-            </div>
-            <div class="certificate-details">
-                <h2>Python Course</h2>
-                <p>Provider: GUVI</p>
-                <p>Date: Jun 2023 - Jul 2023</p>
-                <p>Learning Modules: Python basics, Data structures, File handling</p>
-                <p>Learning Outcomes: Proficiency in Python programming, ability to solve problems using Python</p>
-                <a class="btn" href="#" onclick="showCertificate('images/python_certificate.jpg')">View Certificate</a>
-            </div>
+      <div class="certificate">
+        <div class="certificate-image">
+          <img
+            src="images/python_certificate.jpg"
+            alt="Python Course Certificate"
+          />
         </div>
+        <div class="certificate-details">
+          <h2>Python Course</h2>
+          <p>Provider: GUVI</p>
+          <p>Date: Jun 2023 - Jul 2023</p>
+          <p>Learning Modules: Python basics, Data structures, File handling</p>
+          <p>
+            Learning Outcomes: Proficiency in Python programming, ability to
+            solve problems using Python
+          </p>
+          <a
+            class="btn"
+            href="#"
+            onclick="showCertificate('images/python_certificate.jpg')"
+            >View Certificate</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Certificate Section 4 -->
     <div class="certificate-container">
-        <div class="certificate">
-            <div class="certificate-image">
-                <img src="images/network_certificate.png" alt="Network Essentials Course Certificate">
-            </div>
-            <div class="certificate-details">
-                <h2>Network Essentials Course</h2>
-                <p>Provider: Cisco</p>
-                <p>Date: Feb 2023 - Apr 2023</p>
-                <p>Learning Modules: Networking basics, Routing and switching, Network security</p>
-                <p>Learning Outcomes: Understanding of network infrastructure, practical skills in configuring and managing networks</p>
-                <a class="btn" href="#" onclick="showCertificate('images/network_certificate.png')">View Certificate</a>
-            </div>
+      <div class="certificate">
+        <div class="certificate-image">
+          <img
+            src="images/network_certificate.png"
+            alt="Network Essentials Course Certificate"
+          />
         </div>
+        <div class="certificate-details">
+          <h2>Network Essentials Course</h2>
+          <p>Provider: Cisco</p>
+          <p>Date: Feb 2023 - Apr 2023</p>
+          <p>
+            Learning Modules: Networking basics, Routing and switching, Network
+            security
+          </p>
+          <p>
+            Learning Outcomes: Understanding of network infrastructure,
+            practical skills in configuring and managing networks
+          </p>
+          <a
+            class="btn"
+            href="#"
+            onclick="showCertificate('images/network_certificate.png')"
+            >View Certificate</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Certificate Section 5 -->
     <div class="certificate-container">
-        <div class="certificate">
-            <div class="certificate-image">
-                <img src="images/phone_certificate.png" alt="Smartphone Troubleshooting Certificate">
-            </div>
-            <div class="certificate-details">
-                <h2>Hands-on Training on Smartphone Troubleshooting</h2>
-                <p>Provider: Karpagam Institute of Technology</p>
-                <p>Date: Nov 2022 - Nov 2022</p>
-                <p>Learning Modules: Smartphone hardware, Common issues, Repair techniques</p>
-                <p>Learning Outcomes: Ability to diagnose and repair smartphone issues, practical experience with various smartphone models</p>
-                <a class="btn" href="#" onclick="showCertificate('images/phone_certificate.png')">View Certificate</a>
-            </div>
+      <div class="certificate">
+        <div class="certificate-image">
+          <img
+            src="images/phone_certificate.png"
+            alt="Smartphone Troubleshooting Certificate"
+          />
         </div>
+        <div class="certificate-details">
+          <h2>Hands-on Training on Smartphone Troubleshooting</h2>
+          <p>Provider: Karpagam Institute of Technology</p>
+          <p>Date: Nov 2022 - Nov 2022</p>
+          <p>
+            Learning Modules: Smartphone hardware, Common issues, Repair
+            techniques
+          </p>
+          <p>
+            Learning Outcomes: Ability to diagnose and repair smartphone issues,
+            practical experience with various smartphone models
+          </p>
+          <a
+            class="btn"
+            href="#"
+            onclick="showCertificate('images/phone_certificate.png')"
+            >View Certificate</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Add more certificate sections as needed -->
 
-
     <script>
-        function showCertificate(imageUrl) {
-            window.open(imageUrl, '_blank');
-        }
-    </script>
+      function showCertificate(imageUrl) {
+        window.open(imageUrl, "_blank");
+      }
+      var sidemenu = document.getElementById("sidemenu");
 
-</body>
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
 </html>
