@@ -1,285 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/36df918651.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        body {
-            background: #080808;
-            color: #fff;
-        }
-        
-        .btn {
-            display: block;
-            margin: 50px auto;
-            width: fit-content;
-            border: 1px solid #007bff; /* Changed border color */
-            padding: 14px 50px;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #fff;
-            transition: background 0.5s;
-        }
+        /* Hide the icons by default */
+      .mobile-icon {
+        display: none;
+      }
 
-        .btn:hover {
-            background: #007bff; /* Changed hover background color */
+      /* Show the icons on mobile devices */
+      @media (max-width: 600px) {
+        .mobile-icon {
+          display: inline-block;
         }
+      }
+      body {
+        background: #080808;
+        color: #fff;
+      }
 
-        .project-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
+      .btn {
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #007bff;
+        padding: 14px 50px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #fff;
+        transition: background 0.5s;
+      }
 
-        .project {
-            display: flex;
-            max-width: 800px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+      .btn:hover {
+        background: #007bff;
+      }
 
-        .project-image {
-            flex: 1;
-        }
+      .project-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
 
-        .project-image img {
-            max-width: 100%;
-            height: auto;
-        }
+      .project {
+        display: flex;
+        max-width: 800px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+      }
 
-        .project-details {
-            flex: 2;
-            padding: 20px;
-        }
+      .project-image {
+        flex: 1;
+      }
 
-        .project-details h2 {
-            margin-top: 0;
-        }
+      .project-image img {
+        max-width: 100%;
+        height: auto;
+      }
 
-        .project-details p {
-            margin: 10px 0;
-        }
+      .project-details {
+        flex: 2;
+        padding: 20px;
+      }
 
-        .project-details a {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+      .project-details h2 {
+        margin-top: 0;
+      }
 
-        .project-details a:hover {
-            background-color: #0056b3;
-        }
+      .project-details p {
+        margin: 10px 0;
+      }
 
-        /* Additional CSS for the hidden project details */
-        .project-details-more {
-            display: none;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            color: white;
+      .project-details a {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .project-details a:hover {
+        background-color: #0056b3;
+      }
+
+      .project-details-more {
+        display: none;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        color: white;
+      }
+
+      .project-details-more ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+
+      h1 {
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+
+      .mobile-icon {
+        display: none;
+      }
+
+      @media (max-width: 600px) {
+        .mobile-icon {
+          display: inline-block;
         }
-        .project-details-more ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        h1 {
-    /* text-align: center; Align the heading to the center */
-    margin-top: 50px; /* Adjust the top margin as needed */
-    /* margin-right: 50px; */
-    margin-left: 100px;
-    /* font-size: 60px; Set the font size */
-}
+      }
     </style>
-</head>
-<body>
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo" alt="Logo">
-                <ul id="sidemenu">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./index.html#about">About Me</a></li>
-                    <li><a href="./certficate.html">Certificates</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                    <li><a href="./work.html">Works</a></li>
-                    <li><a href="./index.html#contact">Contact Me</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-        </div>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" alt="Logo" />
+        <ul id="sidemenu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#about">About Me</a></li>
+          <li><a href="./certficate.html">Certificates</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./work.html">Works</a></li>
+          <li><a href="./index.html#contact">Contact Me</a></li>
+          <i class="fas fa-times mobile-icon" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars mobile-icon" onclick="openmenu()"></i>
+      </nav>
+    </div>
 
     <h1>My Projects</h1>
 
     <!-- Project Section -->
     <div class="project-container">
-        <div class="project">
-            <div class="project-image">
-                <img src="images/mark-average-calculator.png" alt="Mark Average Calculator">
-            </div>
-            <div class="project-details">
-                <h2>Mark Average Calculator</h2>
-                <p>Developed a web-based application for calculating total, average, and percentage marks across multiple subjects. Leveraged AWS serverless architecture with Lambda, API Gateway, and DynamoDB for seamless performance and scalability. Integrated AWS Amplify for simplified deployment and management of frontend and backend services.</p>
-                <!-- Button to toggle more details -->
-                <a class="btn" href="#" onclick="toggleDetails('project1-details')">See more</a>
-                <!-- GitHub link -->
-                <a href="https://github.com/SSAKTHIVELMURUGAN/MarkAverageCalculator.git" class="github-link" target="_blank">GitHub</a>
-                <!-- Hidden project details -->
-                <div class="project-details-more" id="project1-details">
-                    <p><strong>Key Technologies:</strong> AWS Lambda, Amazon API Gateway, Amazon DynamoDB, Amazon CloudWatch, AWS IAM, AWS Amplify, Terraform</p>
-                    <p><strong>Dates:</strong> Start - May 2024, End - May 2024</p>
-                    <p><strong>Highlights:</strong></p>
-                    <ul>
-                        <li>Real-time calculation of marks and performance metrics.</li>
-                        <li>Integration with AWS services for efficient backend processing and data storage.</li>
-                        <li>Seamless deployment and management of frontend and backend services using AWS Amplify.</li>
-                        <li>User-friendly interface for easy input and understanding of academic performance.</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="project">
+        <div class="project-image">
+          <img
+            src="images/mark-average-calculator.png"
+            alt="Mark Average Calculator"
+          />
         </div>
+        <div class="project-details">
+          <h2>Mark Average Calculator</h2>
+          <p>
+            Developed a web-based application for calculating total, average,
+            and percentage marks across multiple subjects. Leveraged AWS
+            serverless architecture with Lambda, API Gateway, and DynamoDB for
+            seamless performance and scalability. Integrated AWS Amplify for
+            simplified deployment and management of frontend and backend
+            services.
+          </p>
+          <!-- Button to toggle more details -->
+          <a class="btn" href="#" onclick="toggleDetails('project1-details')"
+            >See more</a
+          >
+          <!-- GitHub link -->
+          <a
+            href="https://github.com/SSAKTHIVELMURUGAN/MarkAverageCalculator.git"
+            class="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+          <!-- Hidden project details -->
+          <div class="project-details-more" id="project1-details">
+            <p>
+              <strong>Key Technologies:</strong> AWS Lambda, Amazon API Gateway,
+              Amazon DynamoDB, Amazon CloudWatch, AWS IAM, AWS Amplify,
+              Terraform
+            </p>
+            <p><strong>Dates:</strong> Start - May 2024, End - May 2024</p>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+              <li>Real-time calculation of marks and performance metrics.</li>
+              <li>
+                Integration with AWS services for efficient backend processing
+                and data storage.
+              </li>
+              <li>
+                Seamless deployment and management of frontend and backend
+                services using AWS Amplify.
+              </li>
+              <li>
+                User-friendly interface for easy input and understanding of
+                academic performance.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Add more project sections in the same way -->
     <!-- Project 2 -->
     <div class="project-container">
-        <div class="project">
-            <div class="project-image">
-                <img src="images/react-portfolio-application.jpg" alt="React Portfolio Application">
-            </div>
-            <div class="project-details">
-                <h2>React Portfolio Application with AWS and Docker</h2>
-                <p>Developed and deployed a responsive portfolio website using React.js, AWS services, and Docker. Utilized AWS S3 for static website hosting and CloudFront for content delivery, ensuring high performance and scalability. Integrated CI/CD pipeline with GitHub Actions for automated deployment. Containerized the application using Docker for consistent deployment across environments.</p>
-                <a class="btn" href="#" onclick="toggleDetails('project2-details')">See more</a>
-                <!-- Button to toggle more details -->
-                   <!-- GitHub link -->
-                   <a href="https://github.com/SSAKTHIVELMURUGAN/reactfolio.git" class="github-link" target="_blank">GitHub</a>
-               
-                <!-- Hidden project details -->
-                <div class="project-details-more" id="project2-details">
-                    <p><strong>Key Technologies:</strong> React.js, AWS S3, AWS CloudFront, GitHub Actions, Docker</p>
-                    <p><strong>Dates:</strong> Start - Apr 2024, End - May 2024</p>
-                    <p><strong>Highlights:</strong></p>
-                    <ul>
-                        <li>Responsive design for optimal viewing on all devices.</li>
-                        <li>Efficient content delivery and hosting using AWS services.</li>
-                        <li>Automated CI/CD pipeline for streamlined development and deployment.</li>
-                        <li>Containerization for consistent deployment across various environments.</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="project">
+        <div class="project-image">
+          <img
+            src="images/react-portfolio-application.jpg"
+            alt="React Portfolio Application"
+          />
         </div>
+        <div class="project-details">
+          <h2>React Portfolio Application with AWS and Docker</h2>
+          <p>
+            Developed and deployed a responsive portfolio website using
+            React.js, AWS services, and Docker. Utilized AWS S3 for static
+            website hosting and CloudFront for content delivery, ensuring high
+            performance and scalability. Integrated CI/CD pipeline with GitHub
+            Actions for automated deployment. Containerized the application
+            using Docker for consistent deployment across environments.
+          </p>
+          <a class="btn" href="#" onclick="toggleDetails('project2-details')"
+            >See more</a
+          >
+          <!-- Button to toggle more details -->
+          <!-- GitHub link -->
+          <a
+            href="https://github.com/SSAKTHIVELMURUGAN/reactfolio.git"
+            class="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+
+          <!-- Hidden project details -->
+          <div class="project-details-more" id="project2-details">
+            <p>
+              <strong>Key Technologies:</strong> React.js, AWS S3, AWS
+              CloudFront, GitHub Actions, Docker
+            </p>
+            <p><strong>Dates:</strong> Start - Apr 2024, End - May 2024</p>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+              <li>Responsive design for optimal viewing on all devices.</li>
+              <li>
+                Efficient content delivery and hosting using AWS services.
+              </li>
+              <li>
+                Automated CI/CD pipeline for streamlined development and
+                deployment.
+              </li>
+              <li>
+                Containerization for consistent deployment across various
+                environments.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Project 3 -->
     <div class="project-container">
-        <div class="project">
-            <div class="project-image">
-                <img src="images/sonic-safe-anc.png" alt="Sonic Safe ANC Industrial Solution">
-            </div>
-            <div class="project-details">
-                <h2>Sonic Safe ANC Industrial Solution</h2>
-                <p>Developed and implemented an innovative solution addressing noise pollution in industrial environments. Leveraged advanced Active Noise Cancellation (ANC) technology and the NRF24L01+PA+LNA wireless module to significantly reduce ambient noise levels, fostering a quieter and safer work environment.</p>
-                <a class="btn" href="#" onclick="toggleDetails('project3-details')">See more</a>
-                  <!-- GitHub link -->
-                  <a href="https://github.com/SSAKTHIVELMURUGAN/Sonic-Safe-ANC-Industrial-Solution---Project-Report.git" class="github-link" target="_blank">GitHub</a>
-               
-                <!-- Hidden project details -->
-                <div class="project-details-more" id="project3-details">
-                    <p><strong>Key Technologies:</strong> Active Noise Cancellation (ANC), NRF24L01+PA+LNA wireless module</p>
-                    <p><strong>Dates:</strong> Start - May 2023, End - Jan 2024</p>
-                    <p><strong>Highlights:</strong></p>
-                    <ul>
-                        <li>Innovative solution to address industrial noise pollution.</li>
-                        <li>Use of advanced ANC technology for noise reduction.</li>
-                        <li>Wireless module for efficient communication and control.</li>
-                        <li>Improved safety and working conditions in industrial environments.</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="project">
+        <div class="project-image">
+          <img
+            src="images/sonic-safe-anc.png"
+            alt="Sonic Safe ANC Industrial Solution"
+          />
         </div>
+        <div class="project-details">
+          <h2>Sonic Safe ANC Industrial Solution</h2>
+          <p>
+            Developed and implemented an innovative solution addressing noise
+            pollution in industrial environments. Leveraged advanced Active
+            Noise Cancellation (ANC) technology and the NRF24L01+PA+LNA wireless
+            module to significantly reduce ambient noise levels, fostering a
+            quieter and safer work environment.
+          </p>
+          <a class="btn" href="#" onclick="toggleDetails('project3-details')"
+            >See more</a
+          >
+          <!-- GitHub link -->
+          <a
+            href="https://github.com/SSAKTHIVELMURUGAN/Sonic-Safe-ANC-Industrial-Solution---Project-Report.git"
+            class="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+
+          <!-- Hidden project details -->
+          <div class="project-details-more" id="project3-details">
+            <p>
+              <strong>Key Technologies:</strong> Active Noise Cancellation
+              (ANC), NRF24L01+PA+LNA wireless module
+            </p>
+            <p><strong>Dates:</strong> Start - May 2023, End - Jan 2024</p>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+              <li>
+                Innovative solution to address industrial noise pollution.
+              </li>
+              <li>Use of advanced ANC technology for noise reduction.</li>
+              <li>Wireless module for efficient communication and control.</li>
+              <li>
+                Improved safety and working conditions in industrial
+                environments.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Project 4 -->
     <div class="project-container">
-        <div class="project">
-            <div class="project-image">
-                <img src="images/selenium-automation.jpg" alt="Java Selenium Automation Project">
-            </div>
-            <div class="project-details">
-                <h2>Java Selenium Automation Project</h2>
-                <p>Automated registration and form filling on OrangeHRM and Parabank websites using Java Selenium. Implemented TestNG for robust test case execution, ensuring reliability. Ongoing project with a focus on expanding automated test cases, enhancing reporting capabilities, and exploring CI/CD pipeline integration.</p>
-                <a class="btn" href="#" onclick="toggleDetails('project4-details')">See more</a>
-                  <!-- GitHub link -->
-                  <a href="https://github.com/SSAKTHIVELMURUGAN/Selenium-Automation-Script-for-OrangeHRM-and-Parabank..git" class="github-link" target="_blank">GitHub</a>
-               
-                <!-- Hidden project details -->
-                <div class="project-details-more" id="project4-details">
-                    <p><strong>Key Technologies:</strong> Java, Selenium, TestNG, CI/CD</p>
-                    <p><strong>Dates:</strong> Start - Jan 2024, End - Feb 2024</p>
-                    <p><strong>Highlights:</strong></p>
-                    <ul>
-                        <li>Automation of complex registration and form filling processes.</li>
-                        <li>Robust test case execution with TestNG.</li>
-                        <li>Focus on continuous improvement and expansion of test coverage.</li>
-                        <li>Exploration of CI/CD pipeline integration for automated testing.</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="project">
+        <div class="project-image">
+          <img
+            src="images/selenium-automation.jpg"
+            alt="Java Selenium Automation Project"
+          />
         </div>
+        <div class="project-details">
+          <h2>Java Selenium Automation Project</h2>
+          <p>
+            Automated registration and form filling on OrangeHRM and Parabank
+            websites using Java Selenium. Implemented TestNG for robust test
+            case execution, ensuring reliability. Ongoing project with a focus
+            on expanding automated test cases, enhancing reporting capabilities,
+            and exploring CI/CD pipeline integration.
+          </p>
+          <a class="btn" href="#" onclick="toggleDetails('project4-details')"
+            >See more</a
+          >
+          <!-- GitHub link -->
+          <a
+            href="https://github.com/SSAKTHIVELMURUGAN/Selenium-Automation-Script-for-OrangeHRM-and-Parabank..git"
+            class="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+
+          <!-- Hidden project details -->
+          <div class="project-details-more" id="project4-details">
+            <p>
+              <strong>Key Technologies:</strong> Java, Selenium, TestNG, CI/CD
+            </p>
+            <p><strong>Dates:</strong> Start - Jan 2024, End - Feb 2024</p>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+              <li>
+                Automation of complex registration and form filling processes.
+              </li>
+              <li>Robust test case execution with TestNG.</li>
+              <li>
+                Focus on continuous improvement and expansion of test coverage.
+              </li>
+              <li>
+                Exploration of CI/CD pipeline integration for automated testing.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Project 5 -->
     <div class="project-container">
-        <div class="project">
-            <div class="project-image">
-                <img src="images/groove-ai-bot-website.jpg" alt="Groove AI Bot Website Design">
-            </div>
-            <div class="project-details">
-                <h2>Groove AI Bot Website Design</h2>
-                <p>Designed the Groove AI Bot website using Canva, crafting high-fidelity mockups for both web poster and admin console. The responsive, user-friendly interface, delivered on time and within budget, bolstered the client's online presence.</p>
-                <a class="btn" href="#" onclick="toggleDetails('project5-details')">See more</a>
-                  <!-- GitHub link -->
-                  <a href="https://www.canva.com/design/DAGFl7VdWuw/g_JNe9CjzJPQjk9UlfV5qw/edit?utm_content=DAGFl7VdWuw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="github-link" target="_blank">Canva</a>
-               
-                <!-- Hidden project details -->
-                <div class="project-details-more" id="project5-details">
-                    <p><strong>Key Technologies:</strong> Canva, Web Design</p>
-                    <p><strong>Dates:</strong> Start - May 2024, End - Jun 2024</p>
-                    <p><strong>Highlights:</strong></p>
-                    <ul>
-                        <li>Creation of high-fidelity mockups for web poster and admin console.</li>
-                        <li>Responsive and user-friendly interface design.</li>
-                        <li>Timely delivery within budget constraints.</li>
-                        <li>Enhancement of client's online presence.</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="project">
+        <div class="project-image">
+          <img
+            src="images/groove-ai-bot-website.jpg"
+            alt="Groove AI Bot Website Design"
+          />
         </div>
+        <div class="project-details">
+          <h2>Groove AI Bot Website Design</h2>
+          <p>
+            Designed the Groove AI Bot website using Canva, crafting
+            high-fidelity mockups for both web poster and admin console. The
+            responsive, user-friendly interface, delivered on time and within
+            budget, bolstered the client's online presence.
+          </p>
+          <a class="btn" href="#" onclick="toggleDetails('project5-details')"
+            >See more</a
+          >
+          <!-- GitHub link -->
+          <a
+            href="https://www.canva.com/design/DAGFl7VdWuw/g_JNe9CjzJPQjk9UlfV5qw/edit?utm_content=DAGFl7VdWuw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            class="github-link"
+            target="_blank"
+            >Canva</a
+          >
+
+          <!-- Hidden project details -->
+          <div class="project-details-more" id="project5-details">
+            <p><strong>Key Technologies:</strong> Canva, Web Design</p>
+            <p><strong>Dates:</strong> Start - May 2024, End - Jun 2024</p>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+              <li>
+                Creation of high-fidelity mockups for web poster and admin
+                console.
+              </li>
+              <li>Responsive and user-friendly interface design.</li>
+              <li>Timely delivery within budget constraints.</li>
+              <li>Enhancement of client's online presence.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Add more project sections as needed -->
 
-
     <script>
-        function toggleDetails(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
+      function toggleDetails(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none" || element.style.display === "") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
         }
+      }
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
     </script>
-
-</body>
+  </body>
 </html>
-
