@@ -117,7 +117,7 @@ nav ul li a:hover::after {
 }
 
 .sub-title {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
     color: #fff;
 }
@@ -451,6 +451,7 @@ nav .fas {
 
     .sub-title {
         font-size: 40px;
+        float:left;
     }
 
     .about-col-1,
@@ -545,5 +546,184 @@ nav .fas {
     background: #ff004f;
 }
 
+/* CSS for GitHub section */
+/* CSS for GitHub section */
+#github-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    flex-direction: column; /* Stack sections vertically */
+}
 
-/* css for badge  */
+/* Each GitHub item in the section */
+.github-item {
+    margin-bottom: 40px;
+}
+
+/* Styling for the GitHub stats container */
+.github-stats-container {
+    display: flex;
+    gap: 20px; /* Space between images */
+    padding-left: 50px; /* Space from left margin */
+    padding-right: 50px; /* Space from right margin */
+}
+
+/* Styling for the images inside the GitHub stats */
+.github-stats-container img {
+    width: 100%;
+    max-width: 400px; /* Adjust based on your needs */
+    height: auto;
+}
+
+/* Heading styling */
+.github-item h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    
+}
+
+/* Hide the scrollbar */
+.github-stats-container::-webkit-scrollbar {
+    display: none;
+}
+
+.github-stats-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #github-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Social Analytics Section Styling */
+#social-analytics-section {
+    margin: 20px; /* Margin around the section */
+    padding: 20px; /* Padding inside the section */
+}
+
+.main-title {
+    font-size: 2.5rem; /* Main title size */
+    color: #ff004f; /* Main title color */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.github-item, .linkedin-item {
+    margin-bottom: 20px; /* Space between items */
+    padding: 15px; /* Padding inside items */
+}
+
+/* Sub-title Styling */
+.sub-title {
+    font-size: 1.8rem; /* Sub-title size */
+    color: #fff; /* Sub-title color */
+    margin-bottom: 10px; /* Space below the sub-title */
+}
+
+/* Visitor Counter Styling */
+.visitor-counter {
+    font-size: 3rem; /* Increase size for modern look */
+    font-weight: bold;
+    color: #ff004f; /* Modern accent color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#github-visitor-number, 
+#linkedin-visitor-number, 
+#post-impression-number, 
+#followers-number {
+    font-size: 3rem; /* The number itself */
+    margin-right: 10px; /* Add some space between number and text */
+    animation: none; /* No box, just the number */
+}
+
+#github-visitor-text, 
+#linkedin-visitor-text, 
+#post-impression-text, 
+#followers-text {
+    font-size: 1.5rem; /* Smaller font size for text */
+    color: #fff; /* You can change this to match your style */
+}
+
+/* Social Analytics Section Styling */
+#social-analytics-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent; /* No background rectangle */
+  }
+  
+  /* Flex container for GitHub and LinkedIn side by side */
+  #social-analytics-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    color: #ff004f; /* Keep the main title in red */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* GitHub and LinkedIn Section Styling */
+  .github-item, .linkedin-item {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    background-color: transparent; /* Transparent background for items */
+    border: none; /* Remove borders */
+    text-align: center;
+  }
+  
+  .sub-title {
+    font-size: 1.8rem;
+    color: #fff; /* White color for sub-title */
+    margin-bottom: 10px;
+  }
+  
+  /* Visitor Counter */
+  .visitor-counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff004f; /* Red color for the numbers */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .visitor-counter span {
+    font-size: 1.2rem;
+    color: #fff; /* White color for text */
+    margin-left: 100px; /* Space between number and text */
+    margin-right: 5px;
+  }
+  
+  #github-visitor-number,
+  #linkedin-visitor-number,
+  #post-impression-number,
+  #followers-number {
+    color: #ff004f; /* Red color for all numbers */
+  }
+  
+  /* Smaller font size for the text beside the numbers */
+  #github-visitor-text, 
+  #linkedin-visitor-text, 
+  #post-impression-text, 
+  #followers-text {
+    font-size: 1.2rem;
+    color: #fff; /* White color for all labels */
+  }
+    
