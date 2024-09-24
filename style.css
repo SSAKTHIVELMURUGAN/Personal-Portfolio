@@ -31,6 +31,13 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: fixed; /* Makes the navigation menu fixed */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the navigation bar takes up full width */
+    background-color: #080808; /* Optional: Adds a background to make the menu visible when scrolling */
+    z-index: 100; /* Keeps the navigation on top */
+    padding: 5px 5%; /* Adjusts padding */
 }
 
 .logo {
@@ -103,6 +110,11 @@ nav ul li a:hover::after {
 .about-col-2 {
     flex-basis: 60%;
 }
+.about-col-2 p{
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
 
 .sub-title {
     font-size: 60px;
@@ -168,6 +180,11 @@ nav ul li a:hover::after {
     margin-top: 50px;
 }
 
+.services-list p{
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: justify;
+}
 .services-list div {
     background: #262226;
     padding: 40px;
@@ -243,6 +260,12 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 14px;
     transition: height 0.5s;
+}
+
+.layer p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: justify;
 }
 
 .layer h3 {
@@ -470,4 +493,57 @@ nav .fas {
     display: block;
 }
 
+/* My badge css */
+/* Badges section */
+#badges {
+    overflow: hidden; /* Hide the overflow to prevent scrollbars */
+}
 
+/* Wrapper to hold badges containers */
+.badges-wrapper {
+    display: flex; /* Use flexbox to arrange badges containers horizontally */
+}
+
+/* Badges container */
+.badges-container {
+    display: flex; /* Use flexbox to arrange badges horizontally */
+    animation: scroll 20s linear infinite; /* Animation for scrolling */
+}
+
+/* Badge style */
+.badge {
+    margin: 10px; /* Space between badges */
+}
+
+/* Badge image style */
+.badge img {
+    max-width: 150px; /* Maximum width for the image */
+    max-height: 100px; /* Maximum height for the image */
+    object-fit: contain; /* Ensures the image fits within the frame without distortion */
+}
+
+/* Animation for horizontal scrolling */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move to the left */
+}
+
+/* See More Button */
+.btn {
+    display: block;
+    margin: 30px auto; /* Center the button */
+    width: fit-content; /* Button width fits the content */
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+
+/* css for badge  */

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Badges</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/36df918651.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: #080808;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #0f0f0f;
+            /* Darker background for nav */
+        }
+
+        nav .logo {
+            width: 200px;
+            /* Increased logo size */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            /* Text color for links */
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            /* Change hover color to white */
+        }
+
+        .badge-container {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        h1.sub-title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .badge-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* Align badges to the left */
+            margin-top: 20px;
+        }
+
+        .badge-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            /* Align badges to the left */
+            gap: 10px;
+            /* Reduced gap between badges */
+        }
+
+        .badge {
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .badge:hover {
+            transform: scale(1.05);
+        }
+
+        .badge img {
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        .hackerrank-badge {
+            max-width: 296px;
+            /* Increase the size for HackerRank badges */
+            height: 296px;
+            /* Maintain aspect ratio */
+            border-radius: 5px;
+            /* Maintain existing styling */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="badge-container">
+        <nav>
+            <img src="images/logo.png" class="logo" alt="Logo" />
+            <ul id="sidemenu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about">About Me</a></li>
+                <li><a href="./certficate.html">Certificates</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./work.html">Works</a></li>
+                <li><a href="./index.html#contact">Contact Me</a></li>
+                <i class="fas fa-times mobile-icon" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars mobile-icon" onclick="openmenu()"></i>
+        </nav>
+
+        <div id="my-badges">
+            <h1 class="sub-title">My Badges</h1>
+
+            <!-- GitHub Badges Section -->
+            <h2>GitHub Badges</h2>
+            <div class="badge-wrapper">
+                <div class="badge-section">
+                    <div class="badge">
+                        <img src="images/Badges/github_badge-pull-shark.png" alt="GitHub Pull Shark Badge" />
+                    </div>
+                    <div class="badge">
+                        <img src="images/Badges/github_badge-quickdraw.png" alt="GitHub Contributor Badge" />
+                    </div>
+                    <div class="badge">
+                        <img src="images/Badges/github_badge-yolo.png" alt="GitHub Commit Badge" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Badges Section -->
+            <h2>Cloud Badges</h2>
+            <div class="badge-wrapper">
+                <div class="badge-section">
+                    <div class="badge">
+                        <img src="images/Badges/ibm-badge.jpg" alt="IBM Cloud Badge" />
+                    </div>
+                    <div class="badge">
+                        <img src="images/Badges/aws_badge.jpg" alt="AWS Cloud Badge" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- HackerRank Badges Section -->
+            <!-- HackerRank Badges Section -->
+            <h2>HackerRank Badges</h2>
+            <div class="badge-wrapper">
+                <div class="badge-section">
+                    <div class="badge">
+                        <img class="hackerrank-badge" src="images/Badges/hackerrank_sql_badge_1-removebg-preview.png"
+                            alt="HackerRank SQL 1-star Badge" />
+                    </div>
+                    <div class="badge">
+                        <img class="hackerrank-badge" src="images/Badges/hackerrank_sql_badge_2-removebg-preview.png"
+                            alt="HackerRank SQL 2-star Badge" />
+                    </div>
+                    <div class="badge">
+                        <img class="hackerrank-badge" src="images/Badges/hackerrank_sql_badge_3-removebg-preview.png"
+                            alt="HackerRank SQL 3-star Badge" />
+                    </div>
+                    <div class="badge">
+                        <img class="hackerrank-badge" src="images/Badges/hackerrank_sql_badge_4-removebg-preview.png"
+                            alt="HackerRank SQL 4-star Badge" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- LeetCode Badges Section -->
+            <h2>LeetCode Badges</h2>
+            <div class="badge-wrapper">
+                <div class="badge-section">
+                    <div class="badge">
+                        <img src="images/Badges/leetcode_badge-removebg-preview.png" alt="LeetCode 50 Days Badge" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
