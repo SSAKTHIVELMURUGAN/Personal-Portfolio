@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakthivel Murugan Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/36df918651.js" crossorigin="anonymous"></script>
+  <style>
+    /* Hide the icons by default */
+    .mobile-icon {
+      display: none;
+    }
+
+    /* Show the icons on mobile devices */
+    @media (max-width: 600px) {
+      .mobile-icon {
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" alt="Logo" />
+        <ul id="sidemenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#certificate">Certificates</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+          <i class="fa-solid fa-xmark mobile-icon" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars mobile-icon" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <h1>Hello I'm <span>Sakthivel Murugan S</span></h1>
+        <p>DevOps Engineer</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.png" class="rounded-image" alt="User Image" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I am currently pursuing a B.E. in Electronics and Communication Engineering at Karpagam Institute of
+            Technology. With a passion for technology and a solid foundation in cloud computing, I specialize in DevOps.
+            I have hands-on experience in deploying and managing applications on AWS, along with skills in GitHub,
+            Docker, Kubernetes, and Terraform for automating infrastructure. As I continue my journey, I aim to further
+            enhance my expertise in DevOps and cloud technologies, focusing on creating innovative solutions through
+            automation and seamless deployment processes.
+          </p>
+
+
+          <!-- <ul>
+              <li>
+                <b>DevOps Engineer:</b>
+                <ul>
+                  <li>Deploying and managing scalable applications on AWS.</li>
+                  <li>
+                    Utilizing Docker and Kubernetes for containerization and
+                    orchestration.
+                  </li>
+                  <li>
+                    Automating infrastructure provisioning with Terraform.
+                  </li>
+                </ul>
+              </li>
+            </ul> -->
+          <!-- <p>
+              Combining technical expertise with creative design, I aim to push
+              the boundaries of technology and create impactful digital
+              solutions.
+            </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="project">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/mark-average-calculator.png" alt="Mark Average Calculator" />
+          <div class="layer">
+            <h3>Mark Average Calculator</h3>
+            <p>
+              Developed a web-based application for calculating total,
+              average, and percentage marks across multiple subjects.
+              Leveraged AWS serverless architecture with Lambda, API Gateway,
+              and DynamoDB for seamless performance and scalability.
+              Integrated AWS Amplify for simplified deployment and management
+              of frontend and backend services.
+            </p>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/react-portfolio-application.jpg" alt="React Portfolio Application" />
+          <div class="layer">
+            <h3>React Portfolio Application with AWS and Docker</h3>
+            <p>
+              Developed and deployed a responsive portfolio website using
+              React.js, AWS services, and Docker. Utilized AWS S3 for static
+              website hosting and CloudFront for content delivery, ensuring
+              high performance and scalability. Integrated CI/CD pipeline with
+              GitHub Actions for automated deployment. Containerized the
+              application using Docker for consistent deployment across
+              environments.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="work">
+                    <img src="images/sonic-safe-anc.png" alt="Sonic Safe ANC Industrial Solution">
+                    <div class="layer">
+                        <h3>Sonic Safe ANC Industrial Solution</h3>
+                        <p>Developed and implemented an innovative solution addressing noise pollution in industrial environments. Leveraged advanced Active Noise Cancellation (ANC) technology and the NRF24L01+PA+LNA wireless module to significantly reduce ambient noise levels, fostering a quieter and safer work environment.</p>
+                    </div>
+                </div> -->
+        <!-- <div class="work">
+                    <img src="images/selenium-automation.jpg" alt="Java Selenium Automation Project">
+                    <div class="layer">
+                        <h3>Java Selenium Automation Project</h3>
+                        <p>Automated registration and form filling on OrangeHRM and Parabank websites using Java Selenium. Implemented TestNG for robust test case execution, ensuring reliability. Ongoing project with a focus on expanding automated test cases, enhancing reporting capabilities, and exploring CI/CD pipeline integration.</p>
+                    </div>
+                </div> -->
+        <!-- <div class="work">
+                    <img src="images/groove-ai-bot-website.jpg" alt="Groove AI Bot Website Design">
+                    <div class="layer">
+                        <h3>Groove AI Bot Website Design</h3>
+                        <p>Designed the Groove AI Bot website using Canva, crafting high-fidelity mockups for both web poster and admin console. The responsive, user-friendly interface, delivered on time and within budget, bolstered the client's online presence.</p>
+                    </div>
+                </div> -->
+      </div>
+      <a href="projects.html" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!-- Works Section -->
+  <div id="works">
+    <div class="container">
+      <h1 class="sub-title">Work Experience</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-brands fa-aws"></i>
+          <h2>Amazon Web Services (AWS)</h2>
+          <h3>DevOps Engineer</h3>
+          <p>
+            Managed and optimized AWS infrastructure for efficient deployment
+            and scaling of applications.
+          </p>
+        </div>
+        <div>
+          <i class="fa-brands fa-docker"></i>
+          <h2>Docker & Kubernetes</h2>
+          <h3>Containerization Specialist</h3>
+          <p>
+            Utilized Docker and Kubernetes for containerization and
+            orchestration of microservices architecture.
+          </p>
+        </div>
+        <div>
+          <i class="fa-brands fa-github"></i>
+          <h2>Version Control & CI/CD</h2>
+          <h3>GitHub & Jenkins</h3>
+          <p>
+            Implemented CI/CD pipelines using GitHub Actions and Jenkins for
+            automated testing and deployment.
+          </p>
+        </div>
+        <div>
+          <i class="fa-brands fa-ubuntu"></i>
+          <h2>Ubuntu Linux</h2>
+          <h3>Linux Systems</h3>
+          <p>
+            Gained hands-on experience with Ubuntu Linux and learned basic commands for managing files, directories, and
+            processes.
+          </p>
+
+        </div>
+      </div>
+      <a href="work.html" class="btn">See more</a>
+
+      <!-- Certificate -->
+      <h1 class="sub-title">Certifications</h1>
+      <div class="services-list" id="certificate">
+        <div>
+          <i class="fa-brands fa-aws"></i>
+          <h2>AWS Academy Graduate - AWS Academy Cloud Foundations</h2>
+
+          <br>
+          <p>
+            Learning Modules: AWS Cloud concepts, Core AWS services, Security, Architecture
+          </p>
+
+          <!-- <p>
+                Certificate: <a href="https://www.credly.com/go/UWnI9U7U" target="_blank">View Certificate</a>
+            </p> -->
+        </div>
+
+        <div>
+          <i class="fa-solid fa-cloud"></i>
+          <h2>IBM - Cloud Core Course</h2>
+          <!-- <h3>IBM</h3> -->
+          <p>Aug 2023 – Nov 2023</p>
+          <br>
+          <p>
+            Learning Modules: Cloud fundamentals, Cloud infrastructure, Cloud
+            services
+          </p>
+          <!-- <p>
+              Learning Outcomes: Understanding cloud computing concepts,
+              practical experience with IBM cloud services
+            </p> -->
+        </div>
+        <div>
+          <i class="fa-brands fa-java"></i>
+          <h2>Infosys Springboard - Core Java Programming Course</h2>
+          <p>Aug 2023 - Sep 2023</p>
+          <br>
+          <p>
+            Learning Modules: Java basics, OOP concepts, Exception handling
+          </p>
+          <!-- <p>
+              Learning Outcomes: Proficiency in Java programming, ability to
+              develop Java applications
+            </p> -->
+        </div>
+        <div>
+          <i class="fa-brands fa-python"></i>
+          <h2>GUVI - Python Course</h2>
+          <p>Jun 2023 - Jul 2023</p>
+          <br>
+          <p>
+            Learning Modules: Python basics, Data structures, File handling
+          </p>
+          <!-- <p>
+              Learning Outcomes: Proficiency in Python programming, ability to
+              solve problems using Python
+            </p> -->
+        </div>
+        <div>
+          <i class="fa-solid fa-server"></i>
+          <h2>Cisco - Network Essentials Course</h2>
+          <p>Feb 2023 - Apr 2023</p>
+          <br>
+          <p>
+            Learning Modules: Networking basics, Routing and switching,
+            Network security
+          </p>
+          <!-- <p>
+              Learning Outcomes: Understanding of network infrastructure,
+              practical skills in configuring and managing networks
+            </p> -->
+        </div>
+        <!-- <div>
+                <i class="fa-solid fa-mobile-alt"></i>
+                <h2>Hands-on Training on Smartphone Troubleshooting</h2>
+                <h3>Karpagam Institude of Technology</h3>
+                <p>Nov 2022 - Nov 2022</p>
+                <p>Learning Modules: Smartphone hardware, Common issues, Repair techniques</p>
+                <p>Learning Outcomes: Ability to diagnose and repair smartphone issues, practical experience with various smartphone models</p>
+            </div> -->
+      </div>
+      <a href="certficate.html" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!-- My Badge Section -->
+  <!-- My Badge Section -->
+  <div id="badges">
+    <div class="container">
+      <h1 class="sub-title">My Badges</h1>
+
+      <!-- Badges Container -->
+      <div class="badges-wrapper">
+        <div class="badges-container">
+          <!-- Badge 1 -->
+          <div class="badge">
+            <img src="images/Badges/ibm-badge.jpg" alt="IBM Cloud Badge">
+          </div>
+          <!-- Badge 2 -->
+          <div class="badge">
+            <img src="images/Badges/aws_badge.jpg" alt="AWS Cloud Badge">
+          </div>
+          <!-- Badge 3 -->
+          <div class="badge">
+            <img src="images/Badges/leetcode_badge-removebg-preview.png" alt="LeetCode 50 Days Badge">
+          </div>
+          <!-- Badge 4 -->
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_1-removebg-preview.png" alt="HackerRank SQL 1-star Badge">
+          </div>
+          <!-- Badge 5 -->
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_2-removebg-preview.png" alt="HackerRank SQL 2-star Badge">
+          </div>
+          <!-- Badge 6 -->
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_3-removebg-preview.png" alt="HackerRank SQL 3-star Badge">
+          </div>
+          <!-- Badge 7 -->
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_4-removebg-preview.png" alt="HackerRank SQL 4-star Badge">
+          </div>
+          <!-- Badge 8 -->
+          <div class="badge">
+            <img src="images/Badges/github_badge-pull-shark.png" alt="GitHub Pull Shark Badge">
+          </div>
+          <!-- Badge 9 -->
+          <div class="badge">
+            <img src="images/Badges/github_badge-quickdraw.png" alt="GitHub Quickdraw Badge">
+          </div>
+          <!-- Badge 10 -->
+          <div class="badge">
+            <img src="images/Badges/github_badge-yolo.png" alt="GitHub YOLO Stark Badge">
+          </div>
+        </div>
+
+        <!-- Duplicate Badges Container for Seamless Scrolling -->
+        <div class="badges-container">
+          <!-- Repeat the same badges here -->
+          <div class="badge">
+            <img src="images/Badges/ibm-badge.jpg" alt="IBM Cloud Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/aws_badge.jpg" alt="AWS Cloud Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/leetcode_badge-removebg-preview.png" alt="LeetCode 50 Days Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_1-removebg-preview.png" alt="HackerRank SQL 1-star Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_2-removebg-preview.png" alt="HackerRank SQL 2-star Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_3-removebg-preview.png" alt="HackerRank SQL 3-star Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/hackerrank_sql_badge_4-removebg-preview.png" alt="HackerRank SQL 4-star Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/github_badge-pull-shark.png" alt="GitHub Pull Shark Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/github_badge-quickdraw.png" alt="GitHub Quickdraw Badge">
+          </div>
+          <div class="badge">
+            <img src="images/Badges/github_badge-yolo.png" alt="GitHub YOLO Stark Badge">
+          </div>
+        </div>
+      </div>
+
+      <!-- See More Button -->
+      <a href="badges.html" class="btn">See More</a>
+    </div>
+  </div>
+<!-- GitHub Stats Section -->
+
+
+<div id="github-section">
+  <div class="github-item">
+    <h1 class="sub-title">GitHub Stats 📊 </h1>
+    
+    <!-- Horizontal scroll container for GitHub stats -->
+    <div class="github-stats-container">
+      <img src="https://github-readme-stats.vercel.app/api?username=SSAKTHIVELMURUGAN&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="GitHub Stats">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=SSAKTHIVELMURUGAN&theme=dark&hide_border=false" alt="GitHub Streak">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SSAKTHIVELMURUGAN&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages">
+    </div>
+  </div>
+</div>
+
+<!-- GitHub Trophies Section -->
+<div id="github-section">
+  <div class="github-item">
+    <h1 class="sub-title">GitHub Trophies 🏆 </h1>
+    <img src="https://github-profile-trophy.vercel.app/?username=SSAKTHIVELMURUGAN&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies">
+  </div>
+</div>
+
+<!-- Social Analytics Section -->
+<div id="social-analytics-section">
+  <h1 class="main-title">Social Analytics</h1>
+
+  <!-- Container for GitHub and LinkedIn Stats -->
+  <div id="social-analytics-container">
+    
+    <!-- GitHub Stats Section -->
+    <div id="github-section">
+      <div class="github-item">
+        <h2 class="sub-title"><i class="fab fa-github"></i> GitHub</h2>
+        <div class="visitor-counter">
+          <span id="github-visitor-number">0</span>
+          <span id="github-visitor-text">Visitors</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LinkedIn Stats Section -->
+    <div id="linkedin-section">
+      <div class="linkedin-item">
+        <h2 class="sub-title"><i class="fab fa-linkedin"></i> LinkedIn</h2>
+        <div class="visitor-counter">
+          <div>
+            <span id="linkedin-visitor-number">0</span>
+            <span id="linkedin-visitor-text">Visitors</span>
+          </div>
+          <div>
+            <span id="post-impression-number">0</span>
+            <span id="post-impression-text">Post Impressions</span>
+          </div>
+          <div>
+            <span id="followers-number">0</span>
+            <span id="followers-text">Followers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+    // Function to animate the visitor count number
+    function animateCount(elementId, finalCount) {
+      const counter = document.getElementById(elementId);
+      let count = 0;
+      const speed = Math.ceil(finalCount / 100); // Adjust speed by dividing the final count
+  
+      const increment = setInterval(() => {
+        count += speed; // Increment the count
+  
+        if (count >= finalCount) {
+          count = finalCount; // Ensure we don't exceed the final count
+          clearInterval(increment); // Stop the interval when the final number is reached
+        }
+  
+        counter.textContent = count; // Update the displayed number
+      }, 30); // Adjust this value to control the speed of counting
+    }
+  
+    // Replace these with your actual counts
+    const finalVisitorCountGit = 336; // GitHub visitors
+    const finalVisitorCountLinkedin = 45; // LinkedIn visitors
+    const finalPostImpressionCount = 200; // LinkedIn post impressions
+    const finalFollowersCount = 456; // LinkedIn followers
+  
+    // IntersectionObserver to observe when the Social Analytics section enters the viewport
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start the count animation when the section is visible
+          animateCount('github-visitor-number', finalVisitorCountGit);
+          animateCount('linkedin-visitor-number', finalVisitorCountLinkedin);
+          animateCount('post-impression-number', finalPostImpressionCount);
+          animateCount('followers-number', finalFollowersCount);
+  
+          // Unobserve the section once counting starts
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    // Target the social analytics section
+    observer.observe(document.getElementById('social-analytics-section'));
+  </script>
+  
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:s.sakthivelmurugan2003@gmail.com">s.sakthivelmurugan2003@gmail.com</a>
+          </p>
+          <p><i class="fas fa-phone"></i> 8903564432</p>
+          <div class="social-icons">
+            <!-- <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a> -->
+            <!-- <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a> -->
+            <a href="https://www.linkedin.com/in/s-sakthivel-murugan-7515a1269/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/SSAKTHIVELMURUGAN"><i class="fab fa-github"></i></a>
+          </div>
+          <a href="images/SAKTHIVEL_MURUGAN_S_721221106084.pdf" download class="btn btn2">Download CV</a>
+          <!-- test -->
+          <div class="contact-section">
+            <h2>Contact Me</h2>
+            <form action="https://formsubmit.co/s.sakthivelmurugan2003@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+    
+                <!-- Uncomment the lines below if using FormSubmit hidden fields -->
+                <!-- Include a hidden input to specify the receiver email, subject, or redirect URL if needed -->
+                <!-- 
+                <input type="hidden" name="_subject" value="New Contact Form Submission!">
+                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                -->
+    
+                <button type="submit">Send Message</button>
+            </form>
+    <!-- test  -->
+        </div>
+        <div class="contact-right">
+          <form action="https://formsubmit.co/el/confirm/c2508abaa9c44896c629b228fd1ffaa2" name="submit-to-google-sheet"  method="POST">
+            <!-- <form > -->
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxijK54kbCdQBNKA9qH-r6sQZ6hEzu7VHnsCr6RypIuJs8ZoXUUdbCwINAhTn7jMipK/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          msg.innerHTML = "Message sent successfully";
+          setTimeout(function () {
+            msg.innerHTML = "";
+          }, 5000);
+          form.reset();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+

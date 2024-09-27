@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assuming you have a linked CSS file -->
+</head>
+<body>
+    <div class="contact-section">
+        <h2>Contact Me</h2>
+        <form action="https://formsubmit.co/s.sakthivelmurugan2003@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <!-- Uncomment the lines below if using FormSubmit hidden fields -->
+            <!-- Include a hidden input to specify the receiver email, subject, or redirect URL if needed -->
+            <!-- 
+            <input type="hidden" name="_subject" value="New Contact Form Submission!">
+            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+            -->
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Commented out code for Google Sheets (Remove or keep as needed) -->
+        <!-- 
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/YOUR_GOOGLE_SHEET_SCRIPT_URL/exec';
+            const form = document.forms['contact-form'];
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message));
+            });
+        </script>
+        -->
+
+    </div>
+</body>
+</html>
